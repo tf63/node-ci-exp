@@ -48,3 +48,8 @@ https://github.com/actions/setup-node/tree/main
 -   `npm ci`を使った方が良い
 -   `setup-node`のサンプルでも`npm ci`を使っている
     https://qiita.com/mstssk/items/8759c71f328cab802670
+
+**npm ciはnode_modulesを一度削除する**
+
+-   `npm ci`の実行時に`node_modules`が存在する場合，一度削除してから`node_modules`を入れ直すらしい
+-   `node_modules`をキャッシュしても削除されてしまいそう
