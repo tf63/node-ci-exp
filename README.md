@@ -35,7 +35,20 @@ https://github.com/actions/setup-node/tree/main
     - run: npm ci
 ```
 
-## pnpmを使う
+
+-   `pnpm/action-setup`を使う
+
+```
+    - uses: actions/checkout@v3
+    - uses: pnpm/action-setup@v2
+        with:
+            version: '9.1.1'
+    - uses: actions/setup-node@v3
+        with:
+            node-version: '20'
+            cache: 'pnpm'
+    - run: pnpm install --frozen-lockfile
+```
 
 -   `npm ci`の代わりに`pnpm install --frozen-lockfile`を使う
 -   lockファイルが最新の場合，`--frozen-lockfile`をしなくとも高速
