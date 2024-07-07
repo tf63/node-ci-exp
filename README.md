@@ -39,7 +39,7 @@ https://github.com/actions/setup-node/tree/main
     - run: npm ci
 ```
 
--   `pnpm/action-setup`を使う
+### `pnpm/action-setup`を使う
 
 ```
     - uses: actions/checkout@v3
