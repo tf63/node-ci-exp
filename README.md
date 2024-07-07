@@ -35,7 +35,6 @@ https://github.com/actions/setup-node/tree/main
     - run: npm ci
 ```
 
-
 -   `pnpm/action-setup`を使う
 
 ```
@@ -50,8 +49,7 @@ https://github.com/actions/setup-node/tree/main
     - run: pnpm install --frozen-lockfile
 ```
 
--   `npm ci`の代わりに`pnpm install --frozen-lockfile`を使う
--   lockファイルが最新の場合，`--frozen-lockfile`をしなくとも高速
+-   `npm ci`の代わりに`pnpm install --frozen-lockfile`を使う (`--frozen-lockfile`はなくてもよいかも)
 
 https://stackoverflow.com/questions/70154568/pnpm-equivalent-command-for-npm-ci
 
