@@ -1,4 +1,4 @@
-name: Cache npm
+name: No Cache
 
 on: [push, pull_request]
 
