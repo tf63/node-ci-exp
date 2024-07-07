@@ -1,0 +1,10 @@
+{
+    "plugins": ["prettier-plugin-tailwindcss"],
+    "tailwindFunctions": ["clsx"],
+    "printWidth": 119,
+    "tabWidth": 4,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "semi": false,
+    "htmlWhitespaceSensitivity": "css"
+}

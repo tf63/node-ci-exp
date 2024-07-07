@@ -1,0 +1,10 @@
+{
+    "editor.tabSize": 4,
+    "files.insertFinalNewline": true,
+    "prettier.configPath": ".prettierrc",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "always"
+    }
+}
