@@ -73,3 +73,7 @@ https://pnpm.io/npmrc#prefer-frozen-lockfile
 
 -   `npm ci`の実行時に`node_modules`が存在する場合，一度削除してから`node_modules`を入れ直すらしい
 -   `node_modules`をキャッシュしても削除されてしまいそう
+
+**キャッシュサイズが増加することがある**
+
+-   原因不明
