@@ -35,6 +35,15 @@ https://github.com/actions/setup-node/tree/main
     - run: npm ci
 ```
 
+## pnpmを使う
+
+-   `npm ci`の代わりに`pnpm install --frozen-lockfile`を使う
+-   lockファイルが最新の場合，`--frozen-lockfile`をしなくとも高速
+
+https://stackoverflow.com/questions/70154568/pnpm-equivalent-command-for-npm-ci
+
+https://pnpm.io/npmrc#prefer-frozen-lockfile
+
 ## キャッシュの再検証
 
 キャッシュのキーに`package-lock.json`のハッシュ値を使用している

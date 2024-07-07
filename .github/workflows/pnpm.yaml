@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Cache pnpm
 
 on: [push, pull_request]
 
@@ -11,5 +11,5 @@ jobs:
             - uses: actions/setup-node@v3
               with:
                   node-version: '20'
-                  cache: 'npm'
-            - run: npm ci
+                  cache: 'pnpm'
+            - run: pnpm install --frozen-lockfile

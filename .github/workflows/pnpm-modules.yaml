@@ -1,4 +1,4 @@
-name: Cache Node Modules
+name: Cache Node Modules (pnpm)
 
 on: [push, pull_request]
 
@@ -18,4 +18,4 @@ jobs:
                   key: ${{ runner.os }}-node-modules-${{ hashFiles('**/package-lock.json') }}
                   restore-keys: |
                       ${{ runner.os }}-node-modules-
-            - run: npm ci
+            - run: pnpm install --frozen-lockfile
