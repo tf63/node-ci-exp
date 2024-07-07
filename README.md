@@ -1,6 +1,6 @@
 # NodeのCIを試すだけ
 
-**`actions/setup-node@v3`を使う**
+### `actions/setup-node@v3`を使う
 
 https://github.com/actions/setup-node/tree/main
 
@@ -15,7 +15,7 @@ https://github.com/actions/setup-node/tree/main
     - run: npm ci
 ```
 
-**node_modulesをキャッシュする**
+### node_modulesをキャッシュする
 
 -   `setup-node`はデフォルトでキャッシュを作成しない
 -   `with > cache`を指定しないようにすれば環境を作れる
