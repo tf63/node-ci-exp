@@ -10,7 +10,7 @@ package-lock.json
 .env*
 
 # markdown
-*.md
+# *.md
 
 # next.js
 /.next/
