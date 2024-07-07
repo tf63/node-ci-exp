@@ -4,7 +4,36 @@
 
 https://github.com/actions/setup-node/tree/main
 
+-   `.npm`をキャッシュする
+
+```
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+        with:
+            node-version: '20'
+            cache: 'npm'
+    - run: npm ci
+```
+
 **node_modulesをキャッシュする**
+
+-   `setup-node`はデフォルトでキャッシュを作成しない
+-   `with > cache`を指定しないようにすれば環境を作れる
+
+```
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+        with:
+            node-version: '20'
+    - uses: actions/cache@v3
+        id: node_modules_cache
+        with:
+            path: '**/node_modules'
+            key: ${{ runner.os }}-node-modules-${{ hashFiles('**/package-lock.json') }}
+            restore-keys: |
+                ${{ runner.os }}-node-modules-
+    - run: npm ci
+```
 
 ## キャッシュの再検証
 
