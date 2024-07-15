@@ -39,14 +39,16 @@ https://github.com/actions/setup-node/tree/main
     - run: npm ci
 ```
 
-### `pnpm/action-setup`を使う
+### pnpmを使う
+
+`pnpm/action-setup`を使わずとも`corepack enable`するだけでよい
+
+https://zenn.dev/longrun_jp/articles/hello-corepack-goodbye-pnpm-action-setup
 
 ```
-    - uses: actions/checkout@v3
-    - uses: pnpm/action-setup@v2
-        with:
-            version: '9.1.1'
-    - uses: actions/setup-node@v3
+    - uses: actions/checkout@v4
+    - run: corepack enable
+    - uses: actions/setup-node@v4
         with:
             node-version: '20'
             cache: 'pnpm'
@@ -77,7 +79,3 @@ https://pnpm.io/npmrc#prefer-frozen-lockfile
 
 -   `npm ci`の実行時に`node_modules`が存在する場合，一度削除してから`node_modules`を入れ直すらしい
 -   `node_modules`をキャッシュしても削除されてしまいそう
-
-**キャッシュサイズが増加することがある**
-
--   原因不明
